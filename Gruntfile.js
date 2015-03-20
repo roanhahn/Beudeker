@@ -86,7 +86,7 @@ module.exports = function(grunt) {
     concat: {
       js: {
         src: '<%= config.src %>/static/js/*.js',
-        dest: '<%= config.dist %>/assets/js/concat.js'
+        dest: '<%= config.dist %>/assets/js/app.js'
       }
     },
 

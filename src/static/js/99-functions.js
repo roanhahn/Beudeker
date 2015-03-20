@@ -6,6 +6,23 @@ $(document).ready(function() {
         this.style.opacity = 1;
       });
     });
+
+
+    //FULL SCREEN VIDEO
+
+    $(".hero-video").wallpaper({
+      loop: true,
+      mute: false,
+      source: {
+
+        poster: "path/to/poster.jpg",
+        /*
+        mp4:    "http://themes.startbootstrap.com/vitality-v1.3.3/assets/mp4/camera.mp4",
+        ogg:    "path/to/video.ogv",
+        webm:   "path/to/video.webm"*/
+        video: "//www.youtube.com/embed/J9rBIKHJoaY"
+      }
+    });
  
 
 
