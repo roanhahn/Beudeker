@@ -27,8 +27,7 @@ h1, h2, h3, h4, small, p, ul, li {
   visibility: hidden; }
 
 body {
-  font: normal normal 400 17px/1.5 'Source Sans Pro', sans-serif;
-  color: red; }
+  font: normal normal 400 17px/1.5 'Source Sans Pro', sans-serif; }
 
 .link {
   text-decoration: none;
@@ -535,4 +534,4 @@ h4 {
   padding-bottom: 133.333333333333%; }
 
 .blaat {
-  color: green; }
+  color: blue; }
