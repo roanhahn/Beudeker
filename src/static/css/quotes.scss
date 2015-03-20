@@ -1,0 +1,33 @@
+$primary-color: #e67e22;
+$secondary-color: #1665ac;
+
+.quote{
+    text-align: center;
+
+    &--small{
+        color: #fff;
+        background-color: $primary-color;
+        padding: 50px 0;
+        font-size: 26px;
+        font-weight: 300;
+        line-height: normal;
+        @media all and (max-width: 767px){
+            font-size: 20px;
+        }
+    }
+
+    &--big{
+        color: #fff;
+        background-color: #222;
+    }
+    &--graphic{
+        padding: 300px 0;
+        background: #fff url(http://themes.startbootstrap.com/vitality-v1.3.3/assets/img/bg-aside.jpg) no-repeat center center fixed;
+        background-size: cover;
+
+        @media all and (max-width: 767px){
+            padding: 100px 0;
+            background-attachment: scroll;
+        }
+    }
+}

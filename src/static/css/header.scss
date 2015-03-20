@@ -1,0 +1,31 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.header-nav{
+    float: right;
+
+    & li{
+        list-style-type: none;
+        float: left;
+    }
+
+    & li a{
+        font-size: 17px;
+        display: block;
+        text-transform: none;
+        font-weight: 400;
+        padding: 10px 15px;
+        color: #fff;
+
+        &:hover{
+            text-decoration: none;
+            border-color: #e67e22;
+        }
+    }
+}
