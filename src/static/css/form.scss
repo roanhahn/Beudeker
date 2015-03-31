@@ -13,10 +13,12 @@
     border: 0px;
     padding: 0px;
     display: block;
+    color: $header-color;
     width: 100%;
     padding: 15px 0;
     font-size: 26px;
     font-weight: 300;
+    background-color: transparent;
     border-bottom: 1px solid #cecece;
 
     &--error{
@@ -28,11 +30,13 @@
     border: 0px;
     padding: 0px;
     display: block;
+    color: $header-color;
     padding: 15px 0;
     font-size: 26px;
     font-weight: 300;
     width: 100%;
     height: 200px;
+    background-color: transparent;
     resize: none;
     margin-bottom: 15px;
     border-bottom: 1px solid #cecece;

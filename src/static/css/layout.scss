@@ -1,10 +1,3 @@
-.sample{
-	background-color: green;
-	height: 10px;
-	display: block;
-	margin-bottom: 10px;
-}
-
 .hero{
 	width: 100%;
 	height: 90%;
@@ -76,14 +69,18 @@
 }
 
 .section{
-	padding: 120px 0;
+	padding: 100px 0;
 	@media all and (max-width: 767px){
 		padding: 60px 0;
 	}
-}
 
-.section--grey{
-	background: #f5f5f5;
+	&--grey{
+		background: #f5f5f5;
+	}
+
+	&--noPadding{
+		padding-bottom: 0px;
+	}
 }
 
 .services-item{
@@ -91,11 +88,11 @@
 
 	& i{
 		margin: 0 auto;
-		font-size: 60px;
+		font-size: 40px;
 		display: block;
 		text-align: center;
 		margin-bottom:  20px;
-		color: $text-color;
+		color: $primary-color;
 	}
 }
 
@@ -247,5 +244,64 @@
 		font-weight: 300;
 		padding-bottom: 10px;
 		line-height: 1.6;
+	}
+}
+
+.client-logos{
+	list-style-type: none;
+
+	& li{
+		float: left;
+		margin: 0;
+		border-bottom: 1px solid #e6e6e6;
+		border-right: 1px solid #e6e6e6;
+		width: 20%;
+		padding: 20px;
+
+
+		&:last-child{
+			border-right: none;
+		}
+
+		@media all and (max-width: 480px){
+			width: 50%;
+
+			&:last-child{
+				border-right: 1px solid #e6e6e6;
+			}
+		}
+	}
+}
+
+.client-logos-first-row{
+	& li{
+		@media all and (max-width: 480px){
+			width: 50%;
+
+			&:nth-child(2n){
+				border-right-color: transparent;
+			}
+		}
+	}
+}
+
+.client-logos-second-row{
+	& li{
+		border-bottom: none;
+		@media all and (max-width: 480px){
+			border-bottom: 1px solid #e6e6e6;
+			&:last-child{
+				border-color: transparent;
+			}
+			&:nth-last-child(2){
+				border-bottom-color: transparent;
+			}
+			&:first-child{
+				border-right-color: transparent;
+			}
+			&:nth-child(3n){
+				border-right-color: transparent;
+			}
+		}
 	}
 }
