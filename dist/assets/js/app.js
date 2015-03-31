@@ -1565,6 +1565,7 @@ window.scrollReveal = (function( window ) {
 })(jQuery, window);
 $(document).ready(function() {
 
+    // LAZY LOAD IMAGES
 
     $(".lazy").unveil(200, function() {
       $(this).load(function() {
@@ -1576,17 +1577,19 @@ $(document).ready(function() {
     //FULL SCREEN VIDEO
 
     $(".hero-video").wallpaper({
-      loop: true,
-      mute: false,
+
+      source: "assets/img/wallpaper.jpg"
+      /*loop: true,
+      mute: true,
       source: {
 
         poster: "path/to/poster.jpg",
-        /*
+        
         mp4:    "http://themes.startbootstrap.com/vitality-v1.3.3/assets/mp4/camera.mp4",
         ogg:    "path/to/video.ogv",
-        webm:   "path/to/video.webm"*/
-        video: "//www.youtube.com/embed/J9rBIKHJoaY"
-      }
+        webm:   "path/to/video.webm"
+        video: "//www.youtube.com/embed/4a0FbQdH3dY"
+      }*/
     });
  
 
@@ -1624,5 +1627,21 @@ $(document).ready(function() {
 
     window.sr = new scrollReveal(config);
 
+    // ANKERS
+
+  $(".hero-arrow").click(function() 
+  {
+    $('html, body').animate({scrollTop: $(".section-about-us").offset().top}, 1000);
+  }); 
+
+  $(".nav-about").click(function() 
+  {
+    $('html, body').animate({scrollTop: $(".section-about-us").offset().top}, 1000);
+  }); 
+
+  $(".nav-services").click(function() 
+  {
+    $('html, body').animate({scrollTop: $(".section-services").offset().top}, 1000);
+  }); 
 
 });

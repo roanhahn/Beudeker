@@ -1824,7 +1824,8 @@ h1, h2, h3, h4, small, p, ul, li, video {
   content: "\f23a"; }
 
 body {
-  font: normal normal 400 17px/1.5 'Source Sans Pro', sans-serif; }
+  font: normal normal 400 17px/1.5 'Source Sans Pro', sans-serif;
+  color: #7a7a7a; }
 
 .link {
   text-decoration: none;
@@ -1873,7 +1874,7 @@ body {
 .h3 {
   font-size: 50px;
   font-weight: 700;
-  color: #333;
+  color: #333333;
   display: block;
   padding-bottom: 30px;
   text-transform: uppercase;
@@ -1883,12 +1884,12 @@ body {
     padding-bottom: 80px; }
   .h3 small {
     display: block;
+    color: #7a7a7a;
     padding: 15px 0 0;
     font-size: 18px;
     line-height: 1.6;
     font-weight: 400;
     width: 80%;
-    color: #333;
     margin: 0 auto;
     text-transform: none;
     font-weight: 400; }
@@ -1900,8 +1901,8 @@ body {
     display: block;
     content: "";
     height: 4px;
-    border-top: 1px solid #e67e22;
-    border-bottom: 1px solid #e67e22;
+    border-top: 1px solid #ff7200;
+    border-bottom: 1px solid #ff7200;
     max-width: 150px;
     margin: 15px auto 0; }
   @media all and (max-width: 767px) {
@@ -1923,23 +1924,24 @@ body {
     display: block;
     content: "";
     height: 4px;
-    border-top: 1px solid #e67e22;
-    border-bottom: 1px solid #e67e22;
+    border-top: 1px solid #ff7200;
+    border-bottom: 1px solid #ff7200;
     max-width: 150px;
     margin: 15px auto 0; }
   .h3-quote span {
-    color: #e67e22; }
+    color: #ff7200; }
   @media all and (max-width: 767px) {
     .h3-quote {
       font-size: 30px; } }
 
-h4 {
+.h4 {
   font-size: 21px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
   padding-bottom: 20px;
-  display: block; }
+  display: block;
+  color: #333333; }
 
 .h5 {
   font-size: 18px;
@@ -1972,14 +1974,15 @@ h4 {
   .header-nav li {
     list-style-type: none;
     float: left; }
-  .header-nav li a {
+  .header-nav li a, .header-nav li span {
     font-size: 17px;
     display: block;
     text-transform: none;
     font-weight: 400;
-    padding: 10px 15px;
-    color: #fff; }
-    .header-nav li a:hover {
+    padding: 10px 25px;
+    color: #fff;
+    cursor: pointer; }
+    .header-nav li a:hover, .header-nav li span:hover {
       text-decoration: none;
       border-color: #e67e22; }
 
@@ -2041,14 +2044,14 @@ h4 {
     transition: all .2s ease; }
   .button--primary:hover {
     background-color: #fff;
-    color: #e67e22; }
+    color: #ff7200; }
   .button--secondary {
     border-color: #333;
     color: #333;
     background-color: transparent; }
     .button--secondary:hover {
-      background-color: #e67e22;
-      border-color: #e67e22;
+      background-color: #ff7200;
+      border-color: #ff7200;
       color: #fff; }
 
 .contact-form fieldset {
@@ -2065,6 +2068,8 @@ h4 {
   font-size: 26px;
   font-weight: 300;
   border-bottom: 1px solid #cecece; }
+  .contact-form-textfield--error {
+    color: red; }
 
 .contact-form-textarea {
   border: 0px;
@@ -2095,7 +2100,7 @@ h4 {
   text-align: center; }
   .quote--small {
     color: #fff;
-    background-color: #e67e22;
+    background-color: #ff7200;
     padding: 50px 0;
     font-size: 26px;
     font-weight: 300;
@@ -2161,7 +2166,7 @@ h4 {
   height: 100px;
   border-radius: 100%;
   overflow: hidden;
-  background-color: #333;
+  background-color: #0192b5;
   color: #fff;
   cursor: pointer;
   position: absolute;
@@ -2169,13 +2174,20 @@ h4 {
   z-index: 10;
   left: 0px;
   text-align: center;
-  left: calc(50% - 50px); }
+  left: calc(50% - 50px);
+  animation: arrow 1s ease-in-out 0s infinite alternate; }
   .hero-arrow:before {
     content: "\f107";
     font-family: "Fontawesome";
     line-height: 100px;
     font-size: 70px; }
 
+@keyframes arrow {
+  0% {
+    bottom: -50px; }
+
+  100% {
+    bottom: -25px; } }
 .section {
   padding: 120px 0; }
   @media all and (max-width: 767px) {
@@ -2189,10 +2201,11 @@ h4 {
   margin-bottom: 40px; }
   .services-item i {
     margin: 0 auto;
-    font-size: 70px;
+    font-size: 60px;
     display: block;
     text-align: center;
-    margin-bottom: 30px; }
+    margin-bottom: 20px;
+    color: #7a7a7a; }
 
 .aanbod-item {
   position: relative;
@@ -2213,7 +2226,7 @@ h4 {
   font-weight: 600; }
 
 .aanbod-item-title {
-  background-color: rgba(22, 101, 172, 0.9);
+  background-color: #0192b5;
   position: absolute;
   bottom: 0px;
   z-index: 10;
@@ -2261,7 +2274,7 @@ h4 {
     position: relative;
     */ }
   .aanbod-item-funda-link:hover {
-    color: #1665ac;
+    color: #0192b5;
     background-color: #fff;
     text-decoration: none;
     -webkit-transition: all .2s ease;
@@ -2313,7 +2326,7 @@ h4 {
   padding: 30px 0; }
   .contact-information i {
     font-size: 140px;
-    color: #e67e22;
+    color: #ff7200;
     margin-bottom: 30px; }
   .contact-information strong {
     text-transform: uppercase;

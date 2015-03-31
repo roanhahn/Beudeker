@@ -15,13 +15,14 @@
         float: left;
     }
 
-    & li a{
+    & li a, li span{
         font-size: 17px;
         display: block;
         text-transform: none;
         font-weight: 400;
-        padding: 10px 15px;
+        padding: 10px 25px;
         color: #fff;
+        cursor: pointer;
 
         &:hover{
             text-decoration: none;
