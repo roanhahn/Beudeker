@@ -1,18 +1,18 @@
 {
-  "name": "assemble",
-  "description": "The best project ever..",
+  "name": "Beudeker Bedrijfsmakelaars",
+  "description": "Full responsive website",
   "version": "0.1.0",
-  "homepage": "https://github.com/roanhahn/assemble",
+  "homepage": "https://github.com/roanhahn/Beudeker",
   "author": {
-    "name": "",
+    "name": "Roan Hahn",
     "url": "http://github.com/roanhahn/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/roanhahn/assemble.git"
+    "url": "git://github.com/roanhahn/Beudeker.git"
   },
   "bugs": {
-    "url": "https://github.com/roanhahn/assemble/issues"
+    "url": "https://github.com/roanhahn/Beudeker/issues"
   },
   "engines": {
     "node": ">=0.10"
