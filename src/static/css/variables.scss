@@ -1,15 +1,33 @@
-$primary-color: #FF7200;
+$primary-color: #FF9900;
+$primary-hover-color: #e58900;
 
-$secondary-color: #0192b5;
-$secondary-hover-color: #00a5d9;
+$secondary-color: #1665ac;
+$secondary-hover-color: #1665ac;
 
 $tritary-color: #0192b5;
+$tritary-hover-color: #0192b5;
 
 $copy-color: red;
 $link-color: red;
-
 $text-color: #7a7a7a;
-$header-color: #333;
-$header-small-color: #7a7a7a;
+
+$header-color: #424242;
+$header-small-color: #8d8d8d;
 
 $error-color: #e67e22;
+
+
+
+$border-color: #f6f6f6;
+
+$nav-link: #8d8d8d;
+
+
+
+// Breakpoints
+
+$breakpoint-tablet-ls: 1024px;
+$breakpoint-tablet: 768px;
+
+$breakpoint-mobile-ls: 480px;
+$breakpoint-mobile: 320px;

@@ -4,9 +4,9 @@
     &--small{
         color: #fff;
         background-color: $primary-color;
-        padding: 50px 0;
+        padding: 60px 0;
         font-size: 26px;
-        font-weight: 300;
+        font-weight: 400;
         line-height: normal;
         @media all and (max-width: 767px){
             font-size: 20px;
@@ -22,7 +22,7 @@
         background: #fff url(http://themes.startbootstrap.com/vitality-v1.3.3/assets/img/bg-aside.jpg) no-repeat center center fixed;
         background-size: cover;
 
-        @media all and (max-width: 767px){
+        @media all and (max-width: $breakpoint-tablet){
             padding: 100px 0;
             background-attachment: scroll;
         }

@@ -1,14 +1,13 @@
 .hero{
 	width: 100%;
-	height: 90%;
+	height: 95%;
 	display: table;
-	background: #95a5a6 url() no-repeat center center fixed;
-	background-size: cover;
 	position: relative;
 }
 
 .hero-overlay{
-	background: rgba(0,0,0,0.5) none;
+	background: rgba(0,0,0,.5) none;
+	/* background: rgba(255,153,0,1) none; */
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -18,12 +17,13 @@
 }
 
 .hero-wrapper{
-	display: table-cell;
-	height: 100%;
-	text-align: center;
-	vertical-align: middle;
-	z-index: 10;
 	position: relative;
+	/*background-color: $primary-color;*/
+	z-index: 10;
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	text-align: center;
 }
 
 .hero-video{
@@ -42,7 +42,7 @@
 	height: 100px;
 	border-radius: 100%;
 	overflow: hidden;
-	background-color: $secondary-color;
+	background-color: #222;
 	color: #fff;
 	cursor: pointer;
 	position: absolute;
@@ -52,25 +52,54 @@
 	text-align: center;
 	left: calc(50% - 50px);
 	animation: arrow 1s ease-in-out 0s infinite alternate;
+	-webkit-animation: arrow 1s ease-in-out 0s infinite alternate;
+
+	&:hover{
+		background-color: $secondary-color;
+	}
 
 	&:before{
 		content: "\f107";
 		font-family: "Fontawesome";
 		line-height: 100px;
 		font-size: 70px;
+		@media all and (max-width: $breakpoint-tablet-ls){
+			font-size: 40px;
+			line-height: 80px;
+		}
+		@media all and (max-width: $breakpoint-mobile-ls){
+			font-size: 35px;
+			line-height: 50px;
+		}
+	}
+	@media all and (max-width: $breakpoint-tablet-ls){
+		width: 80px;
+		height: 80px;
+		left: calc(50% - 40px);
+	}
+	@media all and (max-width: $breakpoint-mobile-ls){
+		width: 50px;
+		height: 50px;
+		left: calc(50% - 25px);
 	}
 }
 
 
 
 @keyframes arrow {
-    0%   {bottom: -50px;}
-  	100% 	{bottom: -25px;}
+	0%   {bottom: 50px;}
+	100% 	{bottom: -10px;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes arrow{
+	0%   {bottom: 50px;}
+	100% 	{bottom: -10px;}
 }
 
 .section{
 	padding: 100px 0;
-	@media all and (max-width: 767px){
+	@media all and (max-width: $breakpoint-tablet){
 		padding: 60px 0;
 	}
 
@@ -81,6 +110,16 @@
 	&--noPadding{
 		padding-bottom: 0px;
 	}
+
+	&--lined{
+		border-bottom: 1px solid $border-color;
+	}
+}
+
+.section-contact{
+	background-image: url(http://digitalmonkey.nl/images/visual-map.png);
+	background-repeat: none;
+	background-size: cover;
 }
 
 .services-item{
@@ -93,6 +132,21 @@
 		text-align: center;
 		margin-bottom:  20px;
 		color: $primary-color;
+		-webkit-transition:  all .3s ease;
+		-moz-transition: all .3s ease;
+		-o-transition:  all .3s ease;
+		transition: all .3s ease;
+	}
+
+	&:hover i{
+		color: $secondary-color;
+		-webkit-transition:  all .3s ease;
+		-moz-transition: all .3s ease;
+		-o-transition:  all .3s ease;
+		transition: all .3s ease;
+	}
+	@media all and (max-width: $breakpoint-mobile-ls){
+		text-align: center;
 	}
 }
 
@@ -117,7 +171,7 @@
 }
 
 .aanbod-item-title{
-	background-color: $tritary-color;
+	background-color: $secondary-color;
 	position: absolute;
 	bottom: 0px;
 	z-index: 10;
@@ -130,7 +184,7 @@
 	-moz-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
-	color: #fff !important;
+	color: #fff;
 }
 
 .aanbod-item-funda-link{
@@ -234,7 +288,7 @@
 	& strong{
 		text-transform: uppercase;
 		display: block;
-		/*color: $secondary-color;*/
+		color: $header-color;
 		font-size: 29px;
 		padding-bottom: 10px;
 	}
@@ -263,7 +317,7 @@
 			border-right: none;
 		}
 
-		@media all and (max-width: 480px){
+		@media all and (max-width: $breakpoint-mobile-ls){
 			width: 50%;
 
 			&:last-child{
@@ -275,7 +329,7 @@
 
 .client-logos-first-row{
 	& li{
-		@media all and (max-width: 480px){
+		@media all and (max-width: $breakpoint-mobile-ls){
 			width: 50%;
 
 			&:nth-child(2n){
@@ -288,7 +342,7 @@
 .client-logos-second-row{
 	& li{
 		border-bottom: none;
-		@media all and (max-width: 480px){
+		@media all and (max-width: $breakpoint-mobile-ls){
 			border-bottom: 1px solid #e6e6e6;
 			&:last-child{
 				border-color: transparent;

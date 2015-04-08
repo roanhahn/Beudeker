@@ -1,0 +1,112 @@
+.blog-illustration{
+	height: 25%;
+	background: #000 url(../img/bg-footer.jpg) no-repeat center center scroll;
+	background-size: cover;
+	@media all and (max-width: $breakpoint-tablet){
+		background-attachment: scroll;
+	}
+}
+
+.article-post{
+	font-family: "Roboto Slab";
+	padding-bottom: 6px;
+	padding-top: 30px;
+	font-size: 15px;
+	color: $primary-color;
+	text-transform: none;
+	border-top: 1px solid $border-color;
+	
+}
+
+.article-tags{
+	border-bottom: 1px solid $border-color;
+	margin-bottom: 30px;
+	font-size: 15px;
+	padding-bottom: 30px;
+	font-family: "Roboto Slab";
+
+	&:before{
+		content: "\f02c";
+		font-family: 'FontAwesome';
+		display: inline-block;
+		margin-right: 6px;
+		color: $secondary-color;
+	}
+
+	& ul{
+		display: inline-block;
+	}
+	& li{
+		display: inline;
+		list-style-type: none;
+
+		&:after{
+			content: ",";
+		}
+
+		&:last-child{
+			&:after{
+				content: "";
+				display: none;
+			}
+
+		}
+	}
+}
+
+.article-illustration{
+	margin-bottom: 30px;
+}
+
+.h1-article{
+	color: $header-color;
+	font-weight: 700;
+	font-size: 49px;
+	margin-bottom: 20px;
+
+	& small{
+		display: block;
+		color: $header-color;
+		padding: 20px 0 0;
+		font-weight: 600;
+	}
+}
+.article-body{
+
+	& p{
+		font-weight: 400;
+		font-size: 19px;
+		line-height: 1.7;
+		margin-bottom: 20px;
+	}
+
+	& h3{
+		color: $header-color;
+		font-weight: 700;
+		padding-bottom: 30px;
+		padding-top: 10px;
+		display: block;
+	}
+}
+
+blockquote{
+	font-family: "Roboto Slab";
+	color: #666;
+	font-weight: 400;
+	font-style: italic;
+}
+
+figure{
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+figcaption{
+	text-align: center;
+	font-family: "Roboto Slab";
+	font-size: 14px;
+	font-weight: 300;
+	font-style: italic;
+	padding: 10px 10px 0;
+	color: $text-color;
+}

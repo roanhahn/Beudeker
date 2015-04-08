@@ -1,32 +1,232 @@
 .header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 15px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	height: 90px;
+	font-weight: 600;
+
+	@media all and (max-width: $breakpoint-tablet-ls){
+		background-color: #fff;
+		height: 70px;
+		-webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+		-moz-box-shadow:    0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+		box-shadow:         0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+		position: fixed;
+	}
+
+	@media all and (max-width: $breakpoint-mobile-ls){
+		height: 50px;
+	}
+}
+
+.header-logo{
+	width: 250px;
+	height: 60px;
+	display: inline-block;
+	background: transparent url(../img/beudeker-logo.png) no-repeat top left scroll;
+	background-size: 231px 120px;
+	margin: 15px 0 0 0;
+	@media all and (max-width: $breakpoint-tablet-ls){
+		background-position: bottom left;
+		background-size: 154px 80px;
+		height: 40px;
+		width: 154px;
+	}
+	@media all and (max-width: $breakpoint-mobile-ls){
+		background-position: bottom left;
+		background-size: 115px 60px;
+		height: 30px;
+		width: 115px;
+		margin-top: 10px;
+	}
+}
+
+.header-menu-btn{
+	float: right;
+	width: 50px;
+	padding: 10px;
+	margin: 13px 0 0;
+	line-height: 0px;
+	cursor: pointer;
+	display: none;
+
+	@media all and (max-width: $breakpoint-tablet-ls){
+		display: inline-block;
+		margin-right: -10px;
+	}
+	@media all and (max-width: $breakpoint-mobile-ls){
+		width: 40px;
+		margin: 7px -10px 0 0;
+	}
+
+
+	& li{
+		display: inline-block;
+		height: 4px;
+		list-style-type: none;
+		background-color: $text-color;
+		margin-bottom: 6px;
+		width: 100%;
+		@media all and (max-width: $breakpoint-mobile-ls){
+			height: 3px;
+			margin-bottom: 4px;
+		}
+	}
+
+
+	&:hover li{
+		background-color: $secondary-color;
+	}
 }
 
 .header-nav{
-    float: right;
+	float: right;
 
-    & li{
-        list-style-type: none;
-        float: left;
-    }
+	& li{
+		list-style-type: none;
+		float: left;
+	}
 
-    & li a, li span{
-        font-size: 17px;
-        display: block;
-        text-transform: none;
-        font-weight: 400;
-        padding: 10px 25px;
-        color: #fff;
-        cursor: pointer;
+	& li a, li span{
+		font-size: 15px;
+		display: block;
+		text-transform: uppercase;
+		padding: 0 35px;
+		line-height: 90px;
+		color: #fff;
+		letter-spacing: .2px;
+		cursor: pointer;
+		-webkit-transition:  color .2s ease-in;
+		-moz-transition: color .2s ease-in;
+		-o-transition:  color .2s ease-in;
+		transition: color .2s ease-in;
 
-        &:hover{
-            text-decoration: none;
-            border-color: #e67e22;
-        }
-    }
+		&:hover{
+			text-decoration: none;
+			color: rgba(255,255,255,0.8);
+			-webkit-transition:  color .2s ease-in;
+			-moz-transition: color .2s ease-in;
+			-o-transition:  color .2s ease-in;
+			transition: color .2s ease-in;
+		}
+	}
+
+	@media all and (max-width: $breakpoint-tablet-ls){
+		display: none;
+	}
+	@media all and (min-width: 1025px){
+		display: block !important;
+	}
+}
+
+.header-nav-expand{
+	background-color: #fff;
+	position: absolute;
+	display: block !important;
+	width: 100%;
+	top: 70px;
+	float: none;
+	left: 0;
+	z-index: 900;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+	-moz-box-shadow:    0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+	box-shadow:         0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+	-webkit-transition:  all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	-o-transition:  all .2s ease-in;
+	transition: all .2s ease-in;
+
+	@media all and (max-width: $breakpoint-mobile-ls){
+		top: 50px;
+	}
+	@media all and (min-width: 1025px){
+		display: none !important;
+	}
+
+	& li{
+		float: none;
+	}
+
+	& li a, li span{
+		line-height: normal !important;
+		color: $header-color;
+		padding: 15px 15px;
+		letter-spacing: 1px;
+		border-bottom: 1px solid $border-color !important;
+
+		&:before{
+			content: '\f105';
+			font-family: 'FontAwesome';
+			display: inline-block;
+			margin-right: 10px;
+			font-weight: normal;
+		}
+
+		&:hover{
+			color: #fff !important;
+			background-color: $primary-color;
+		}
+	}
+}
+
+.header-nav-menu{
+	float: right;
+	color: #fff;
+	padding: 10px 10px;
+	cursor: pointer;
+	color: red;
+	display: none;
+
+	& i{
+		display: block;
+		line-height: 1;
+		font-weight: normal;
+		font-size: 30px;
+	}
+}
+
+.fixed-header{
+	position: fixed;
+	background-color: #fff;
+	top: -200px;
+	border-bottom: 1px solid $border-color;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+	-moz-box-shadow:    0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+	box-shadow:         0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+
+}
+
+.sticky-header{
+	-webkit-transition:  top .5s ease-in;
+	-moz-transition: top .5s ease-in;
+	-o-transition:  top .5s ease-in;
+	transition: top .5s ease-in;
+
+	& li a, li span{
+		color: $nav-link;
+		border-bottom: 3px solid #fff;
+		line-height: 87px;
+	}
+
+	& li a:hover, li span:hover{
+		color: $primary-color;
+		border-color: $primary-color;
+		-moz-transition: all .3s ease;
+		-o-transition:  all .3s ease;
+		transition: all .3s ease;
+	}
+
+	& .header-logo{
+		background-position: bottom left;
+	}
+}
+
+.sticky-header-down{
+	top: 0px;
+	-webkit-transition:  top .7s ease-out;
+	-moz-transition:  top .7s ease-out;
+	-o-transition:  top .7s ease-out;
+	transition: top .7s ease-out;
 }
